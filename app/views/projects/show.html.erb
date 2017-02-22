@@ -1,0 +1,21 @@
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Start Date:</strong>
+  <%= @article.start_date %>
+</p>
+
+<p>
+  <strong>End Date:</strong>
+  <%= @article.end_date %>
+</p>
+
+<p>
+  <strong>Word Count:</strong>
+  <%= @article.word_count %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> | <%= link_to 'Back', projects_path %>

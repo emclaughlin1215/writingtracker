@@ -1,0 +1,26 @@
+
+<h1>Listing projects</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th> Word Goal</th>
+    <th colspan=3>Operations</th>
+  </tr>
+
+  <% @projects.each do |project| %>
+    <tr>
+      <td><%= project.title %></td>
+      <td><%= project.start_date %></td>
+      <td><%= project.end_date %></td>
+      <td><%= project.word_goal %></td>
+      <td><%= link_to 'Show', project_path(project) %></td>
+      <td><%= link_to 'Edit', edit_project_path(project) %></td>
+      <td><%= link_to 'Destroy', project_path(project),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
