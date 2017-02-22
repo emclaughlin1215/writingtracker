@@ -1,0 +1,13 @@
+<%= form_for([@project, @project.daily_counts.build]) do |f| %>
+  <p>
+    <%= f.label :count_date %><br>
+    <%= f.date_field :count_date %>
+  </p>
+  <p>
+    <%= f.label :count %><br>
+    <%= f.number_field :count %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

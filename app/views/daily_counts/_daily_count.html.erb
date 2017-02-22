@@ -1,0 +1,15 @@
+<p>
+  <strong>Date:</strong>
+  <%= daily_count.count_date %>
+</p>
+
+<p>
+  <strong>Word Count:</strong>
+  <%= daily_count.count %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Count', [daily_count.project, daily_count],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
